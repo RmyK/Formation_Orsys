@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModifAcces
 {
-    internal abstract class Vehicule
+    internal abstract class Vehicule : Moteur
     {
         public Guid NumeroSerie { get; private set; }
 
@@ -24,18 +24,12 @@ namespace ModifAcces
         }
 
         protected int QteCarburant { get; set; }
-        public DateTime DateDernierEntretien { get; set; }
+        public DateOnly DateDernierEntretien { get; set; }
 
         public void Demarrer()
         {
 
         }
-
-        public void ReparerMoteur()
-        {
-
-        }
-
 
         private void Generer_NumSerie()
         {

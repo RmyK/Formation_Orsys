@@ -19,8 +19,17 @@ namespace ModifAcces
         {
         }
 
-        public void EntretenirAvionVoiture(Vehicule vehicule)
+        public void EntretenirVehiculeAMoteur(IVehiculeAMoteur vehicule)
         {
+            if(vehicule is Voiture)
+            {
+                ((Voiture)vehicule).AjouterGasoil();
+            }
+            else if (vehicule is Avion)
+            {
+                ((Avion)vehicule).AjouterKerozen();
+            }
+
             vehicule.ReparerMoteur();
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModifAcces
 {
-    internal class Voiture : Vehicule
+    internal class Voiture : Vehicule, IVehiculeAMoteur
     {
         public int NbRoues { get; set; }
 
@@ -15,10 +15,6 @@ namespace ModifAcces
         public void AjouterGasoil()
         {
             QteCarburant++;
-        }
-
-        public void ReparerMoteur()
-        {
         }
 
         public static string ShowColor()
