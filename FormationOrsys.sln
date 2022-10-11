@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionStock", "GestionStock\GestionStock.csproj", "{437A23A7-2BBE-44D0-AD85-6ED6B96730F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestionStock", "GestionStock\GestionStock.csproj", "{437A23A7-2BBE-44D0-AD85-6ED6B96730F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO", "POO\POO.csproj", "{9D4A331A-555B-4D74-96D5-74A3A2EA1625}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO", "POO\POO.csproj", "{9D4A331A-555B-4D74-96D5-74A3A2EA1625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismeSurcharge", "PolymorphismeSurcharge\PolymorphismeSurcharge.csproj", "{FD69FAA1-D9A4-45AE-A2F8-16D3DAE31B26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PolymorphismeSurcharge", "PolymorphismeSurcharge\PolymorphismeSurcharge.csproj", "{FD69FAA1-D9A4-45AE-A2F8-16D3DAE31B26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifAcces", "ModifAcces\ModifAcces.csproj", "{F1B6198A-4966-4E03-85DD-A30484890CF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModifAcces", "ModifAcces\ModifAcces.csproj", "{F1B6198A-4966-4E03-85DD-A30484890CF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypeClasse", "TypeClasse\TypeClasse.csproj", "{3BC35804-7BDD-43DA-945E-A2AF40B37084}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleBusiness", "EcoleBusiness\EcoleBusiness.csproj", "{1B2DBABF-9572-4F36-A914-1C2926A42749}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{F1B6198A-4966-4E03-85DD-A30484890CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1B6198A-4966-4E03-85DD-A30484890CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1B6198A-4966-4E03-85DD-A30484890CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BC35804-7BDD-43DA-945E-A2AF40B37084}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BC35804-7BDD-43DA-945E-A2AF40B37084}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BC35804-7BDD-43DA-945E-A2AF40B37084}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BC35804-7BDD-43DA-945E-A2AF40B37084}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B2DBABF-9572-4F36-A914-1C2926A42749}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2DBABF-9572-4F36-A914-1C2926A42749}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2DBABF-9572-4F36-A914-1C2926A42749}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2DBABF-9572-4F36-A914-1C2926A42749}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

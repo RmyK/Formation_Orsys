@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ModifAcces
+namespace TypeClasse
 {
-    internal class Moteur
+    internal partial class MaClasse
     {
+        public string MonNom { get; set; }
     }
 }

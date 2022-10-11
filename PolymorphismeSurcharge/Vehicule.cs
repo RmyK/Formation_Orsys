@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PolymorphismeSurcharge
 {
-    internal class Vehicule
+    internal abstract class Vehicule
     {
         public int VitesseDeplacement { get; set; }
         public int SerialNumber { get; set; }
@@ -14,6 +14,12 @@ namespace PolymorphismeSurcharge
 
         public string Nom { get; set; }
 
+        public virtual string Klaxonner()
+        {
+            return "Tiiit";
 
+        }
+
+        public abstract void Demarrer();
     }
 }

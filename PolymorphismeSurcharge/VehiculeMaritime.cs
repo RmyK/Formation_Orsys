@@ -9,5 +9,10 @@ namespace PolymorphismeSurcharge
     internal class VehiculeMaritime : Vehicule
     {
         public int NombreDeVoile { get; set; }
+
+        public override void Demarrer()
+        {
+            Console.WriteLine("Je démarre à la rame");
+        }
     }
 }

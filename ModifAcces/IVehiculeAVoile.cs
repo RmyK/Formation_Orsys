@@ -10,6 +10,9 @@ namespace ModifAcces
     {
         public int NombreDeVoile { get; set; }
 
+        /// <summary>
+        /// Repare la voile de mon vehicule
+        /// </summary>
         public void RepriserVoile()
         {
             Console.WriteLine("Voiles comme neuves");

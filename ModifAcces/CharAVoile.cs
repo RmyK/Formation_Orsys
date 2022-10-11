@@ -9,5 +9,10 @@ namespace ModifAcces
     internal class CharAVoile : Vehicule, IVehiculeAVoile
     {
         public int NombreDeVoile { get; set; }
+
+        public override int GetHashCode()
+        {
+            return (NombreDeVoile, Proprietaire).GetHashCode();
+        }
     }
 }
