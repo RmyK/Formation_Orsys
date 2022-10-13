@@ -9,6 +9,7 @@ namespace EcoleBusiness.DataModels
 {
     public class Fonction
     {
+        public int Id { get; set; }
         public string Libelle { get; set; }
         public string Service { get; set; }
     }

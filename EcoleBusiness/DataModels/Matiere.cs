@@ -9,7 +9,11 @@ namespace EcoleBusiness.DataModels
 {
     public class Matiere
     {
+        [Key]
+        public int Id { get; set; }
+        [MaxLength(50)]
         public string Libelle { get; set; }
+        [Range(1,10)]
         public int Coefficient { get; set; }
     }
 }

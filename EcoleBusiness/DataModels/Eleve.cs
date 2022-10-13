@@ -8,15 +8,20 @@ using System.Threading.Tasks;
 
 namespace EcoleBusiness.DataModels
 {
+    [Table("Eleves")]
     public class Eleve : Personne
     {
         public int Moyenne { get; set; }
-        public int Id { get; internal set; }
 
-        public override string Afficher()
-        {
-            return $"{base.Afficher()} Moyenne : {Moyenne}";
-        }
+        //public override string Afficher()
+        //{
+        //    return $"{base.Afficher()} Moyenne : {Moyenne}";
+        //}
+
+        //public override string ToString()
+        //{
+        //    return base.Afficher();
+        //}
 
     }
 }

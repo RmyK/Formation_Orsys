@@ -1,0 +1,69 @@
+﻿<Window x:Class="EcoleWPF.CreateEleve"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EcoleWPF"
+        mc:Ignorable="d"
+        Title="CreateEleve" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <GroupBox Margin="5">
+            <GroupBox.Header>
+                <TextBlock>Création/Edition d'un nouvel élève</TextBlock>
+            </GroupBox.Header>
+            <StackPanel>
+                <StackPanel.Resources>
+                    <Style x:Key="labelCreation" TargetType="Label" >
+                        <Setter Property="FontWeight" Value="Bold"></Setter>
+                        <Setter Property="FontFamily" Value="Arial"></Setter>
+                        <Setter Property="Foreground" Value="BlueViolet"></Setter>
+                        <Setter Property="FontStyle" Value="Italic"></Setter>
+                    </Style>
+                </StackPanel.Resources>
+                <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
+                    <Label Style="{StaticResource labelCreation}" Content="Nom :"></Label>
+                    <TextBox Text="{Binding SelectedEleve.Nom}" Width="250px"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
+                    <Label Style="{StaticResource labelCreation}" Content="Prénom :"></Label>
+                    <TextBox Text="{Binding SelectedEleve.Prenom}" Width="250px"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
+                    <Label Style="{StaticResource labelCreation}" Content="Moyenne :"></Label>
+                    <TextBox Text="{Binding SelectedEleve.Moyenne}" Width="250px"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="0 10 0 0" Orientation="Horizontal">
+                    <Label Style="{StaticResource labelCreation}" Content="Date de Naissance :"></Label>
+                    <DatePicker SelectedDate="{Binding SelectedEleve.DateNaissance}" Width="250px"></DatePicker>
+                </StackPanel>
+                <Button Click="SauvegardeEleve" Margin="0 10 0 0" Content="Sauvegarder" Background="CadetBlue"></Button>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox Margin="5" Grid.Column="1">
+            <GroupBox.Header>
+                Listes des élèves
+            </GroupBox.Header>
+            <ListBox ItemsSource="{Binding MesEleves}" SelectionChanged="SelectEleve">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel.Resources>
+                                <Style TargetType="TextBlock" x:Key="txtb">
+                                    <Setter Property="Margin" Value="2 0"></Setter>
+                                </Style>
+                            </StackPanel.Resources>
+                            <TextBlock Style="{StaticResource txtb}" Text="{Binding Nom}"></TextBlock>
+                            <TextBlock Style="{StaticResource txtb}" Text="{Binding Prenom}"></TextBlock>
+                            <TextBlock Style="{StaticResource txtb}" Text="{Binding Age}"></TextBlock>
+                            <TextBlock Style="{StaticResource txtb}" Text="{Binding Moyenne}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </GroupBox>
+    </Grid>
+</Window>

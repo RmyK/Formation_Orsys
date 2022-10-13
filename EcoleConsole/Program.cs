@@ -4,12 +4,12 @@ using EcoleBusiness.Services;
 
 Console.WriteLine("Hello, World!");
 
-Ecole monEcole = new Ecole() { Nom = "St-Exupéry" };
-EcoleService ecolSrv = new EcoleService(monEcole);
+EcoleService ecolSrv = new EcoleService(1);
 
-Console.WriteLine($"Bonjour ! Bienvenu à l'école {monEcole.Nom} !");
+Console.WriteLine($"Bonjour ! Bienvenu à l'école {ecolSrv.MonEcole.Nom} !");
 Console.WriteLine("Veuillez saisir le nom de l'élève à inscrire :");
 var eleve = new Eleve();
+eleve.EcoleId = ecolSrv.MonEcole.Id;
 eleve.Nom = Console.ReadLine();
 Console.WriteLine("Quel est son prénom");
 eleve.Prenom = Console.ReadLine();

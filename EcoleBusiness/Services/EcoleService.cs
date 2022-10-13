@@ -1,4 +1,6 @@
 ﻿using EcoleBusiness.DataModels;
+using EcoleBusiness.Services.DataAccess;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,10 +29,46 @@ namespace EcoleBusiness.Services
             }
         }
 
+        public Ecole GetEcole(int id)
+        {
+            var repo = new Repository();
+            return repo.GetById<Ecole>(id);
+        }
+
+        public IEnumerable<Personne> GetAllMembres(int id)
+        {
+            var lst = new List<Personne>();
+            using var ctx = new EcoleDbContext();
+
+            lst.AddRange(
+                ctx.Eleves
+                .Where(e => e.EcoleId == id)
+                .Select(e => (Personne)e)
+                .ToList()
+                );
+            lst.AddRange(
+                ctx.Administratifs
+                .Where(e => e.EcoleId == id)
+                .Include(e=>e.Fonction)
+                .Select(e => (Personne)e)
+                .ToList()
+                );
+            lst.AddRange(
+                ctx.Professeurs
+                .Where(e => e.EcoleId == id)
+                .Include(e => e.Matiere)
+                .Select(e => (Personne)e)
+                .ToList()
+                );
+
+            return lst;
+        }
+            
+
         public void Inscrire(Eleve eleve)
         {
-            eleve.Id = ++MonEcole.NbEleve;
-            MonEcole.Personnes.Add(eleve);
+            var eleveService = new EleveService();
+            eleveService.InsertOrUpdateEleve(eleve);
         }
 
         public void AfficherEleve()
@@ -40,6 +78,14 @@ namespace EcoleBusiness.Services
                 if (personne is Eleve)
                     Console.WriteLine(personne.Afficher());
             }
+        }
+
+        public List<Eleve> GetEleves()
+        {
+            return MonEcole?.Personnes
+                .Where(p => p is Eleve)
+                .Select(e=>(Eleve)e)
+                .ToList();
         }
 
         public void AfficherPersonnel()
@@ -59,9 +105,10 @@ namespace EcoleBusiness.Services
             }
         }
 
-        public EcoleService(Ecole ecole)
+        public EcoleService(int id)
         {
-            MonEcole = ecole;
+            MonEcole = GetEcole(id);
+            MonEcole.Personnes = GetAllMembres(id).ToList();
         }
     }
 }

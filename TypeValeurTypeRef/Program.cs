@@ -16,6 +16,13 @@ Console.WriteLine(p.Prenom);
 Console.WriteLine(p1.Prenom);
 Console.WriteLine(i);
 
+//Utilisation du paramêtre out
+Personne newPersonne;
+var oldPersonne = ChangePrenom2(p, out newPersonne);
+
+
+Console.Read();
+
 //ref force le passage par ref d'un type valeur.=> si la méthode modifie la référence,
 //la valeur est aussi modifier dans le reste du code
 void ChangePrenom(Personne personne, ref int i)
@@ -23,4 +30,13 @@ void ChangePrenom(Personne personne, ref int i)
     personne.Prenom = "Jean";
     Console.WriteLine(i);
     i = 12;
+}
+
+Personne ChangePrenom2(Personne personne, out Personne newPersonne)
+{
+    newPersonne = personne with { };
+    newPersonne.Prenom = "Pierre";
+    return personne;
+
+
 }

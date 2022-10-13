@@ -8,9 +8,14 @@ using System.Threading.Tasks;
 
 namespace EcoleBusiness.DataModels
 {
+    [Table("Administratifs")]
     public class Administratif : Personne, ISalarie
     {
+        public int? FonctionId { get; set; }
+        [ForeignKey(nameof(FonctionId))]
         public Fonction? Fonction { get; set; }
+
+        [Range(1000, 100000)]
         public decimal Salaire { get; set; }
 
         public override string Afficher()

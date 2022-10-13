@@ -8,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace EcoleBusiness.DataModels
 {
+    [Table("Professeurs")]
     public class Professeur : Personne, ISalarie
     {
+        public int MatiereId { get; set; }
+        [ForeignKey(nameof(MatiereId))]
         public Matiere? Matiere { get; set; }
         public decimal Salaire { get; set; }
 

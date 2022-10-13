@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ModifAcces
 {
-    internal abstract class Vehicule : Moteur
+    internal abstract class Vehicule
     {
         public Guid NumeroSerie { get; private set; }
 

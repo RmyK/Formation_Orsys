@@ -10,9 +10,9 @@ namespace ModifAcces
     {
         public int NombreDeVoile { get; set; }
 
-        public override int GetHashCode()
-        {
-            return (NombreDeVoile, Proprietaire).GetHashCode();
-        }
+        //public override int GetHashCode()
+        //{
+        //    return (NombreDeVoile, Proprietaire).GetHashCode();
+        //}
     }
 }
