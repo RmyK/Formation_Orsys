@@ -1,5 +1,6 @@
 ﻿using EcoleBusiness.DataModels;
 using EcoleBusiness.Services.DataAccess;
+using EcoleBusiness.Services.IServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EcoleBusiness.Services
 {
-    public class EleveService
+    public class EleveService : IElevesService
     {
         public void InsertOrUpdateEleve(Eleve eleve)
         {
@@ -23,6 +24,12 @@ namespace EcoleBusiness.Services
         {
             var repo = new Repository();
             return repo.GetAll<Eleve>().ToList();
+        }
+
+        public Eleve GetEleveById(int id)
+        {
+            var repo = new Repository();
+            return repo.GetById<Eleve>(id);
         }
     }
 }

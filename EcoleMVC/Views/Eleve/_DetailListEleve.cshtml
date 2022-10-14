@@ -1,0 +1,50 @@
+﻿@model EcoleMVC.Models.EleveViewModel
+
+<div class="d-flex flex-row">
+    @if (Model.IsDetail)
+    {
+        <img src="https://placekitten.com/640/360" />
+    }
+    <div>
+        <div>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Nom)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Nom)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Prenom)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Prenom)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ShortDate)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ShortDate)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Age)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Age)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Moyenne)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Moyenne)
+                </dd>
+            </dl>
+        </div>
+        <div class="d-flex flex-row">
+            @Html.ActionLink("Edit", "Edit", new { id=@Model.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=@Model.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=@Model.Id })
+
+        </div>
+    </div>
+</div>

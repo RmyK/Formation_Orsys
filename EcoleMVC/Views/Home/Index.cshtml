@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 mb-2">Bienvenu dans l'application de gestion de l'école St Exupéry</h1>
+
+    <h3 class="mb-2">
+        @Html.ActionLink("Gérer les élèves","Index","Eleve");
+    </h3>
+
+    <h3>
+        @Html.ActionLink("Gérer les professeurs","Index","Eleve");
+    </h3>
+</div>
