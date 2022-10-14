@@ -1,0 +1,29 @@
+﻿@page "/eleve"
+@using EcoleWASM.Client.Components
+@using EcoleWASM.Client.Services
+@using EcoleWASM.Shared
+
+@inject EleveService eleveService
+
+<h3>La liste des mes élèves</h3>
+
+@if (mesEleves == null)
+{
+    <span>Liste en cours de chargement ...</span>
+}
+else
+{
+    @foreach (var eleve in mesEleves)
+    {
+        <DisplayEleve MonEleve=@eleve ShowPicture=@(eleve.Age>18)></DisplayEleve>
+    }
+}
+
+@code {
+    private List<EleveDTO> mesEleves;
+
+    protected override async Task OnInitializedAsync()
+    {
+        mesEleves = await eleveService.GetEleve();
+    }
+}

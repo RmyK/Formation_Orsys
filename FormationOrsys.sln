@@ -33,7 +33,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoleWinForm", "EcoleWinFor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoleWPF", "EcoleWPF\EcoleWPF.csproj", "{E55892E4-D2A9-410F-AEF3-88BA970FE83F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleMVC", "EcoleMVC\EcoleMVC.csproj", "{E09F47EB-3573-4954-8CD7-07B663DE58B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcoleMVC", "EcoleMVC\EcoleMVC.csproj", "{E09F47EB-3573-4954-8CD7-07B663DE58B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleBlazorServer", "EcoleBlazorServer\EcoleBlazorServer.csproj", "{DD5E47AD-4913-4F6E-9801-241052E919F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleWASM.Server", "EcoleWASM\Server\EcoleWASM.Server.csproj", "{1497BA4F-C131-4380-ABB0-15E9F4A4E0DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleWASM.Client", "EcoleWASM\Client\EcoleWASM.Client.csproj", "{8A745A98-A1F8-4179-A14F-98DC3A7A8CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EcoleWASM.Shared", "EcoleWASM\Shared\EcoleWASM.Shared.csproj", "{508E64F2-553C-474F-8ED4-53249BD67BDA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +113,22 @@ Global
 		{E09F47EB-3573-4954-8CD7-07B663DE58B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E09F47EB-3573-4954-8CD7-07B663DE58B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E09F47EB-3573-4954-8CD7-07B663DE58B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5E47AD-4913-4F6E-9801-241052E919F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5E47AD-4913-4F6E-9801-241052E919F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5E47AD-4913-4F6E-9801-241052E919F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5E47AD-4913-4F6E-9801-241052E919F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1497BA4F-C131-4380-ABB0-15E9F4A4E0DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1497BA4F-C131-4380-ABB0-15E9F4A4E0DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1497BA4F-C131-4380-ABB0-15E9F4A4E0DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1497BA4F-C131-4380-ABB0-15E9F4A4E0DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A745A98-A1F8-4179-A14F-98DC3A7A8CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A745A98-A1F8-4179-A14F-98DC3A7A8CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A745A98-A1F8-4179-A14F-98DC3A7A8CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A745A98-A1F8-4179-A14F-98DC3A7A8CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508E64F2-553C-474F-8ED4-53249BD67BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508E64F2-553C-474F-8ED4-53249BD67BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508E64F2-553C-474F-8ED4-53249BD67BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508E64F2-553C-474F-8ED4-53249BD67BDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

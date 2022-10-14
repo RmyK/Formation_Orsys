@@ -1,0 +1,30 @@
+﻿@page "/eleve"
+@using EcoleBusiness.DataModels
+@using EcoleBusiness.Services
+@using EcoleBlazorServer.Components
+
+@inject EleveService eleveService
+
+<h3>La liste des mes élèves</h3>
+
+@if (mesEleves == null)
+{
+    <span>Liste en cours de chargement ...</span>
+}
+else
+{
+    @foreach (var eleve in mesEleves)
+    {
+        <DisplayEleve MonEleve=@eleve ShowPicture=@(eleve.Age>18)></DisplayEleve>
+    }
+}
+
+@code {
+    private List<Eleve> mesEleves;
+
+    protected override Task OnInitializedAsync()
+    {
+        mesEleves = eleveService.GetEleves();
+        return base.OnInitializedAsync();
+    }
+}

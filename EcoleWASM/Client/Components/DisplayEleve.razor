@@ -1,0 +1,20 @@
+﻿@using EcoleWASM.Shared
+
+<div class="d-flex flex-row">
+    @if (ShowPicture)
+    {
+        <img src="https://placekitten.com/640/360" />
+    }
+    <div class="d-flex flex-column">
+        <span>Nom : @MonEleve.Nom</span>
+        <span>Prénom : @MonEleve.Prenom</span>
+        <span>Date de naissance : @MonEleve.DateNaissance.ToShortDateString()</span>
+        <span>Age : @MonEleve.Age</span>
+        <span>Moyenne : @MonEleve.Moyenne</span>
+    </div>
+</div>
+
+@code {
+    [Parameter] public EleveDTO MonEleve { get; set; }
+    [Parameter] public bool ShowPicture { get; set; }
+}
